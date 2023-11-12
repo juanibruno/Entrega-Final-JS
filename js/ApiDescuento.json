@@ -1,0 +1,31 @@
+[
+    {
+      "id": 0,
+      "imagen": "../assets/Paisajismo.jpg",
+      "titulo": "¡Paisajismo y Deco!",
+      "bonificacion": 30,
+      "descripcion": "Descuento valido de Lunes a Miercoles!"
+    },
+    {
+      "id": 1,
+      "imagen": "../assets/aspersores.jpg",
+      "titulo": "¡Filtros y Aspersores!",
+      "bonificacion": 20,
+      "descripcion": "Descuento valido de Lunes a Miercoles!"
+    },
+    {
+      "id": 2,
+      "imagen": "../assets/tuberias.jpg",
+      "titulo": "¡Tuberías!",
+      "bonificacion": 10,
+      "descripcion": "Descuento valido de Lunes a Miercoles!"
+    },
+    {
+      "id": 3,
+      "imagen": "../assets/bombas.jpg",
+      "titulo": "¡Bombas hidraulicas!",
+      "bonificacion": 15,
+      "descripcion": "Descuento valido de Lunes a Miercoles!"
+    }
+  ]
+  

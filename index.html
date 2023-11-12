@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <title>AQUA DESCUENTOS</title>
+</head>
+
+<body>
+    <Header>
+        <section class="navbar">
+            <div class="contenedorLogo">
+                <img src="./assets/logo.jpg" alt="logo">
+            </div>
+            <div>
+                <ul class="menu">
+                    <button id="descuentos" type="button" aria-controls="miFormulario">AQUA DESCUENTOS</button>
+                    <li><a href="">Quienes Somos</a></li>
+                    <li><a href="">Productos</a></li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Proyectos</a></li>
+                </ul>
+            </div>
+        </section>
+    </Header>
+    <main>
+        <form id="miFormulario" style="display: none;" class="miFormulario">
+            <h2>¡Ultimo paso para ahorrar!</h2>
+            <h3>Completá los siguientes datos y disfruta los descuentos!</h3>
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            <div class="botonEnviarContainer">
+                <button type="submit" class="botonEnviar">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/script.js"></script>
+</body>

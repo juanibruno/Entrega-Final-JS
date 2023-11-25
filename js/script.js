@@ -106,6 +106,15 @@ document.body.addEventListener('click', (event) => {
 });
 mostrarSeccion();
 
+function mostrarToastDespuesDeEnviarFormulario() {
+    Toastify({
+        text: '¡Formulario enviado con éxito!',
+        duration: 3000,
+        gravity: 'top',
+        position: 'center',
+        backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+    }).showToast();
+}
 
 function abrirFormulario() {
     const formulario = document.getElementById('miFormulario');
@@ -124,17 +133,31 @@ function abrirFormulario() {
             correo: correo
          
         };
+
+        (function() {
+            const tarjetaGuardada = localStorage.getItem('tarjetaSeleccionada');
+            if (tarjetaGuardada) {
+                const tarjetaSeleccionada = JSON.parse(tarjetaGuardada);
+                Toastify({
+                    text: JSON.stringify(tarjetaSeleccionada),
+                    duration: 3000,
+                    gravity: 'top',
+                    position: 'center',
+                    backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)', 
+                }).showToast();
+            } 
+        })();
+        
         
         localStorage.setItem('datosFormulario', JSON.stringify(datosFormulario));
-
-        
-        window.location.href = "index2.html";
+        mostrarToastDespuesDeEnviarFormulario();
+        setTimeout(() => {
+            window.location.href = "index2.html";
+        }, 3000); 
     });
+
     
+
 }
 
-const tarjetaGuardada = localStorage.getItem('tarjetaSeleccionada');
-if (tarjetaGuardada) {
-    const tarjetaSeleccionada = JSON.parse(tarjetaGuardada);
-    console.log(tarjetaGuardada);
-}
+

@@ -177,3 +177,38 @@ form {
 .miFormulario{
     margin: 20px;
 }
+
+/* Agrega estos estilos específicos para mostrarProductos al final de tu archivo de estilos */
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 16px;
+    text-align: center;
+    background-color: #f5f5f5;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.producto h2 {
+    color: #010f0e;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Puedes agregar más estilos según tus necesidades */

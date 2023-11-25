@@ -2,8 +2,9 @@
 const apiAqua = './js/ApiDescuento.json';
 const main = document.querySelector('#main');
 
+
 let data;
-let contenedor;
+
 
 function fetchData() {
     return new Promise((resolve, reject) => {
@@ -59,7 +60,7 @@ function mostrarSeccion() {
         })
     })
         .catch(error => console.error(error));
-    return 'btn-descuento';
+   
 }
 
 
@@ -160,4 +161,41 @@ function abrirFormulario() {
 
 }
 
+
+function mostrarProductos() {
+    const productosElement = document.querySelector('#productos');
+
+    
+    if (!productosElement) {
+        console.error('No se encontró el elemento con ID "productos"');
+        return;
+    }
+
+     productosElement.innerHTML = '';
+
+    data.forEach(producto => {
+        const productoDiv = document.createElement('div');
+        productoDiv.classList.add('producto');
+
+        productoDiv.innerHTML = `
+            <img src="${producto.imagen}" alt="Descripción del producto">
+            <h2 class="titulo">${producto.titulo}</h2>
+            `;
+
+  
+        productosElement.appendChild(productoDiv);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+    mostrarSeccion();
+
+
+    setTimeout(() => {
+    
+        mostrarProductos();
+
+    }, 2200);
+});
 

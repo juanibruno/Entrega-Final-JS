@@ -196,6 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
         mostrarProductos();
 
-    }, 2200);
+    }, 2000);
 });
 
